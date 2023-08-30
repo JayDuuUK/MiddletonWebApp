@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middleton Mini Golf</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard">
+      <img src="logo.png" alt="">
+      <h1>Scoreboard</h1>
+      <table id="scoreTable">
+        <thead>
+          <tr>
+            <th>Hole</th>
+            <th>Player 1</th>
+            <th>Player 2</th>
+            <th>Player 3</th>
+            <th>Player 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows for each hole -->
+          <tr>
+            <td>1</td>
+            <td><input oninput="updateTotals()" type="number" min="1" max="100"></td>
+            <td><input oninput="updateTotals()" type="number" min="1" max="100"></td>
+            <td><input oninput="updateTotals()" type="number" min="1" max="100"></td>
+            <td><input oninput="updateTotals()" type="number" min="1" max="100"></td>
+          </tr>
+          <!-- Further holes can be added with the Add Hole button -->
+        </tbody>
+        <tfoot>
+            <tr id="totalsRow">
+              <td>Totals</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </table>
+      <!-- Add hole button for holes 2 -> 18 -->
+      <button id="addHoleButton" class="addItemButton">Add Hole</button>
+      <!-- Add player button for extra players -->
+      <button id="addPlayerButton" class="addItemButton">Add Player</button>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
